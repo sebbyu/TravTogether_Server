@@ -22,8 +22,14 @@ class UserAdmin(BaseUserAdmin):
     ('Permissions', {'fields': ('is_admin', 'is_staff', 'is_active')}),
   )
 
+  # add_fieldsets = (
+  #   (None, {'classes': ('wide',),
+  #   'fields': ('email', 'nickname', 'profilePicture', 'gender',
+  #   'age', 'ethnicity', 'location', 'bio', 'password1', 'password2',)}),
+  # )
+
   add_fieldsets = (
     (None, {'classes': ('wide',),
     'fields': ('email', 'nickname', 'profilePicture', 'gender',
-    'age', 'ethnicity', 'location', 'bio', 'password1', 'password2',)}),
+    'age', 'ethnicity', 'location', 'bio', 'password',)}),
   )
