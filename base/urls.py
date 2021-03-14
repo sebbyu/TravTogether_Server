@@ -9,12 +9,15 @@ urlpatterns = [
   path('', base_views.api_root),
   path('users/', user_views.UserList.as_view(), name='user-list'),
   path('users/<slug:slug>/', user_views.UserDetail.as_view(), name='user-detail'),
+  path('authentication/', user_views.authentication),
+  
+  
   # path('questions/', qanda_views.QuestionList.as_view(), name='question-list'),
   # path('questions/<slug:slug>/', qanda_views.QuestionDetail.as_view(), name='question-detail'),
   # path('answers/', qanda_views.AnswerList.as_view(), name='answer-list'),
   # path('answers/<int:pk>/', qanda_views.AnswerDetail.as_view(), name='answer-detail'),
 
-  path('authentication/', user_views.authentication),
+  
   # path('contact/', user_views.contact),
   # path('sendMessage/', user_views.sendMessage),
   # path('chats/', chat_views.ChatList.as_view(), name="chat-list"),

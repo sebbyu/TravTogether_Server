@@ -1,0 +1,7 @@
+city,country,lat,lng,admin_name,iso2,iso3,capital,population,id
+25 de Mayo,Argentina,-37.8,-67.6833,La Pampa,AR,ARG,minor,17430,1032912712
+Aalborg,Denmark,57.0337,9.9166,Nordjylland,DK,DNK,admin,122219,1208789278
+Aarau,Switzerland,47.3896,8.0524,Aargau,CH,CHE,admin,,1756722157
+Aarhus,Denmark,56.1572,10.2107,Midtjylland,DK,DNK,minor,237551,1208841031
+De Queen,United States,34.0426,-94.342,Arkansas,US,USA,,6206,1840014735
+De Soto,United States,38.141,-90.5609,Missouri,US,USA,,7182,1840007509
