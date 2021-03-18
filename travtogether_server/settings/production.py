@@ -1,3 +1,3 @@
 from .base import *
 
-DDEBUG = False
+DEBUG = False
