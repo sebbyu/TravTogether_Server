@@ -1,1 +1,1 @@
-web: gunicorn travtogether_server.wsgi
+web: python manage.py collectstatic --no-input; gunicorn travtogether_server.wsgi

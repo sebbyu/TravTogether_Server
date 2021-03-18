@@ -12,8 +12,10 @@ class UserAuthBackend(BaseBackend):
       if check_password(password, user.password):
         return user
       else:
+        print("There is error")
         return None
     except User.DoesNotExist:
+      print("user does not exist")
       return None
   
   def get_user(self, user_id):
