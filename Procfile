@@ -1,0 +1,1 @@
+web: gunicorn travtogether_server.wsgi
