@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 from dotenv import load_dotenv
-import django_heroku
 import os
 from travtogether_server.current_settings import CURRENT_HOST
 load_dotenv()
@@ -139,5 +138,3 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'user.backends.UserAuthBackend',
 ]
-
-django_heroku.settings(locals())
