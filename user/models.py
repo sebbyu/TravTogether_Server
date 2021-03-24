@@ -18,9 +18,10 @@ def get_locations(filename):
       place = ""
       if row[6] in ['CHN', 'USA', 'RUS']:
         place = f'{row[0]}, {row[4]}, {row[1]}'
+        places.append((f'{row[0]}, {row[4]}, {row[1]}', place))
       else:
         place = f'{row[0]}, {row[1]}'
-      places.append((f'{row[0]}, {row[4]}, {row[1]}', place))
+        places.append((f'{row[0]}, {row[1]}', place))
     return tuple(places)
 LOCATIONS = get_locations(os.path.abspath(os.path.join(settings.STATIC_ROOT,
   'locations/world-cities.csv')))
