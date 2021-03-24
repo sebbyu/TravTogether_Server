@@ -43,10 +43,10 @@ ETHNICITY = (
 AGE_RANGE = (
   ("10-", "10-"),
   ("10-20", "10-20"),
-  ("20-30", "20-30"),
-  ("30-40", "30-40"),
-  ("40-50", "40-50"),
-  ("50-60", "50-60"),
+  ("21-30", "21-30"),
+  ("31-40", "31-40"),
+  ("41-50", "41-50"),
+  ("51-60", "51-60"),
   ("60+", "60+"),
 )
 
@@ -87,6 +87,7 @@ class User(AbstractBaseUser):
   bio = models.TextField(_("bio"), blank=True)
   location = models.CharField(_("location"), max_length=250, choices=LOCATIONS, blank=True)
   fromFirebase = models.BooleanField(_("fromFirebase"), default=False)
+  userPhotoURL = models.URLField(_("userPhotoURL"), max_length=254, blank=True)
   is_admin = models.BooleanField(_("is_admin"), default=False)
   is_staff = models.BooleanField(_("is_staff"), default=False)
   is_active = models.BooleanField(_("is_active"), default=True)

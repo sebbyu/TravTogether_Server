@@ -7,8 +7,9 @@ User = get_user_model()
 class CustomCreationForm(UserCreationForm):
   class Meta:
     model = User
-    fields = ('email', 'nickname', 'gender', 'age', 'ethnicity',
-    'location', 'bio', 'password',)
+    # fields = ('email', 'nickname', 'gender', 'age', 'ethnicity',
+    # 'location', 'bio', 'password', 'userPhotoURL')
+    fields = "__all__"
 
 class CustomChangeForm(UserChangeForm):
   class Meta:
@@ -21,9 +22,10 @@ class UserRegistrationForm(forms.ModelForm):
   gender = forms.CharField(required=False)
   age = forms.CharField(required=False)
   ethnicity = forms.CharField(required=False)
-  location = forms.CharField(required=True)
+  location = forms.CharField(required=False)
   password = forms.CharField(widget=forms.PasswordInput, required=True)
+  userPhotoURL = forms.URLField()
   class Meta:
     model = User
-    fields = ['email', 'nickname', 'gender', 'age', 'ethnicity', 'password']
+    fields = ['email', 'nickname', 'gender', 'age', 'ethnicity', 'password', 'userPhotoURL']
 

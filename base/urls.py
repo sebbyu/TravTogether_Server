@@ -8,6 +8,7 @@ from django.conf import settings
 urlpatterns = [
   path('', base_views.api_root),
   path('users/', user_views.UserList.as_view(), name='user-list'),
+  # path('users/', user_views.userList, name='user-list'),
   path('users/<slug:slug>/', user_views.UserDetail.as_view(), name='user-detail'),
   path('authentication/', user_views.authentication),
   
